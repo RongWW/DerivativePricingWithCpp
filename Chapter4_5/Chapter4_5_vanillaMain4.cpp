@@ -20,7 +20,7 @@ int main()
     double r, Vol;
     unsigned long NumOfPaths;
     
-    cout << "\nChapter4_4\n";
+    cout << "\nChapter4_5\n";
     cout << "\nExpiry\n";
     cin >> Expiry;
     cout << "\nSpot\n";
@@ -34,8 +34,8 @@ int main()
     cout << "\nNumber of Paths\n";
     cin >> NumOfPaths;
     
-    rParameter = ParametersConstant(r);
-    volParameter = ParametersConstant(Vol);
+    ParametersConstant rParameter(r);
+    ParametersConstant volParameter(Vol);
     
     PayoffCall3 ThePayoffCall(Strike);
     VanillaOption3 TheCall(ThePayoffCall, Expiry);
